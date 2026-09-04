@@ -51,7 +51,7 @@
             message.textContent =
                 "No game specified.\n\n" +
                 "Example:\n" +
-                "?game=bad-piggies-38.swf";
+                "?game=mutilate_a_doll_2.swf";
             return;
         }
 
@@ -70,6 +70,17 @@
         try {
             const ruffle = window.RufflePlayer.newest();
             const player = ruffle.createPlayer();
+
+            player.config = {
+                scale: "showAll",
+                forceScale: true,
+
+                salign: "",
+                forceAlign: true,
+
+                allowFullscreen: true,
+                autoplay: "on"
+            };
 
             player.style.width = "100%";
             player.style.height = "100%";
